@@ -1,0 +1,84 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* userForm css */
+h1{
+  border-bottom: 2px solid black;
+}
+.form{
+  width: 50%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+}
+
+form{
+  width: 100%;
+  height: 150px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs{
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputs input{
+  width: 90%;
+  height: 30px;
+}
+.inputs label{
+  text-align: end;
+  width: 10%;
+  height: 30px;
+}
+
+button{
+  width: 50%;
+  height: 50px;
+  font-size: 16px;
+}
+
+#message{
+  font-size: 18px;
+  font-weight: bold;
+  word-spacing: 3px;
+  margin-top: 20px;
+  width: 80%;
+  height: 50px;
+  /* border: 1px solid red; */
+  text-align: center;
+  color: green;
+}
