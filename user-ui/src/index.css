@@ -2,55 +2,61 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
   width: 100%;
   height: 100vh;
   position: relative;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background:#040D12;
 }
 
 
 /* userForm css */
-h1{
-  border-bottom: 2px solid black;
+
+.userList_header h1 {
+  font-size: 2em;
+  color: #DDDDDD;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+.userList_header button {
+  color: #040D12;
+  font-weight: bold;
+  max-width: 100px;
+  height: 30px;
+  letter-spacing: 2px;
 }
 .form{
   width: 50%;
-  height: 300px;
+  height: 550px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px;
-  background-color: antiquewhite;
+  background-color: #FAEBD75C;
+  color: white;
+  font-weight: bold;
   border-radius: 20px;
 }
 
 form{
   width: 100%;
-  height: 150px;
-  /* border: 1px solid red; */
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .inputs{
   width: 100%;
   height: 80px;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +64,7 @@ form{
 .inputs input{
   width: 90%;
   height: 30px;
+  padding-left: 5px;
 }
 .inputs label{
   text-align: end;
@@ -65,20 +72,173 @@ form{
   height: 30px;
 }
 
+textarea {
+  width: 90%;
+  height: 80px;
+  padding: 5px;
+}
+
 button{
   width: 50%;
   height: 50px;
   font-size: 16px;
+  margin-top: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
-#message{
-  font-size: 18px;
-  font-weight: bold;
-  word-spacing: 3px;
-  margin-top: 20px;
-  width: 80%;
-  height: 50px;
-  /* border: 1px solid red; */
+
+
+
+/* UserList css */
+table, th, td {
+  /* border: 2px solid #251B37; */
+  border: 2px solid #FAEBD75C;
+  border-collapse: collapse;
+}
+table {
+  width: 22%;
+  margin-right: 20px;
+  background-color: #EEF5FF;
+}
+
+table th {
+  background-color:#102C57;
+  width: 50%;
   text-align: center;
-  color: green;
+  color: #F0A500;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 900;
+}
+ table td {
+  padding: 2px;
+  background-color: #FAEEE7;
+  color: #132043;
+  padding-left: 5px;
+}
+
+.userList_header {
+  max-height: 20%;
+  width: 100%;
+  text-align: center;
+}
+.userList_header button {
+  width: 10%;
+}
+
+#edit {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  background-color:#005B41;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+#edit:hover {
+  cursor: pointer;
+  background: #65B741;
+  color: #F0A500;
+  
+}
+
+#delete{
+ padding: 0;
+ margin: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #750E21;
+  color: #CEE6F3;
+  text-align: center;
+  outline: none;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+#delete:hover {
+  cursor: pointer;
+  background: #FE0000;
+  color: #F0A500;
+}
+
+.userList {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.userData {
+  background-color: #86A789;
+  color: #132043;
+  max-width: 10%;
+  text-align: end;
+}
+
+.main__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #FAEBD75C;
+}
+.users__container {
+  width: 90%;
+  height: 80%;
+  padding: 10px;
+  /* background:#040D12; */
+  border: 2px solid #040D12 ;
+
+}
+
+.user__container table {
+  width: 100%;
+  border: 1px solid red;
+  margin-right: 20px;
+}
+
+
+@media (min-width: 600px)  and (max-width: 1100px){
+  .inputs{
+    justify-content:space-evenly;
+  }
+  .form{
+    width: 95%;
+  }
+  .inputs input{
+    width: 90%;
+  }
+  .inputs label{
+    width: 10%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+  .inputs{
+    justify-content:space-evenly;
+  }
+  .form{
+    width: 95%;
+  }
+  .inputs input{
+    width: 80%;
+  }
+  .inputs label{
+    width: 20%;
+  }
+
+  .userList_header button {
+    width: 20%;
+    height: 30px;
+  }
 }
